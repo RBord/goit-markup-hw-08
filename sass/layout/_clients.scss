@@ -1,1 +1,38 @@
 /* OUR CLIENTS */
+
+.clients .container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.client.title {
+    margin-bottom: 50px;
+}
+.client-link {
+    display: inline-flex;
+    // width: 170px;
+    // height: 90px;
+    border: 1px solid #AFB1B8; 
+    border-radius: 4px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+        border: 1px solid var(--accent-color);
+    }
+    &:hover .client-icon, &:focus .client-icon {
+        fill: var(--accent-color);
+    }
+    @media screen and (max-width: 489px){
+        
+        width: 210px;
+    }
+    
+}
+// .clients-list {
+//     display: flex;
+// }
+// .client-item:not(:last-child) {
+//     margin-right: 30px;
+// }
+.client-icon {
+    fill: #AFB1B8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}

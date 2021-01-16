@@ -1,1 +1,56 @@
 /* Стиль Особенностей */
+
+.title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.167;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+}
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+.features {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    // .features-list {
+    //     display: flex;
+    // }
+}
+// .features-list-item:not(:last-child){
+//     margin-right: 30px;
+// }
+.icon-bcg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+}
+.features-icon {
+    width: 70px;
+    height: 70px;
+}
+
+.features-list {
+    .item-title {
+        margin-top: 0;
+        margin-bottom: 10px;
+    
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.143;
+        letter-spacing: 0.03em;
+        color: var(--title-text-color);
+} 
+    .item-text {
+        margin: 0;
+        padding: 0;
+        // display: inline-block;
+        // max-width: 270px;
+    }
+}
