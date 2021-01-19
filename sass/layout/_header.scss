@@ -14,7 +14,7 @@
 .logo {
     color: var(--accent-color);
 }
-@media screen and (min-width: 0px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
     .nav-logo {
         padding-top: 16px;
         padding-bottom: 16px;
@@ -27,12 +27,31 @@
     .navigation {
         display: none;
     }
-}
-@media screen and (min-width: 768px) {
-    .menu-button {
-        display: none;
+    header {
+        position: relative;
     }
-  }
+    .navigation.is-open {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    
+        width: 100%;
+        text-align: center;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    
+        background-color :#FFFFFF;
+        border-top: 1px solid #ECECEC;
+    }
+    .main-nav-list li:not(:last-child){
+        margin-bottom: 40px;
+    }
+    .main-nav-list li:last-child {
+        margin-bottom: 60px;
+    }
+}
+
 
 .menu-button {
   display: inline-flex;
@@ -52,94 +71,40 @@
 .menu-button.is-open .icon-menu {
     display: none;
 }
-header {
+
+.nav-link {
     position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.navigation.is-open {
-    display: block;
+.nav-link.current::after {
     position: absolute;
-    top: 100%;
-    left: 0;
+    bottom: -8px;
+    left:0;
 
-    width: 100%;
-    text-align: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
-
-    background-color :#FFFFFF;
-    border-top: 1px solid #ECECEC;
+    content:"";
+    width:100%;
+    height: 4px;
+    margin: 0;
+    // margin-bottom: -2px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
 }
-
-// .head {
-//     display: flex;
-//     align-items: center;
-// }
-.main-nav {
-    // .head > & {
-    //     display: flex;
-    //     align-items: center;
-    // }
-    & .nav-logo {
-        // margin-right: 94px;
-    
-    
-        color: var(--title-text-color);
-        text-decoration: none;
-        font-family: var(--secondary-font);
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 1.192;
-        letter-spacing: 0.03em;
-    }
-    & .nav-link {
-        position: relative;
-
-        // display: block;
-        // padding-top:32px ;
-        // padding-bottom:32px ;
-
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.143;
-        letter-spacing: 0.02em;
-        color: var(--title-text-color);
-        text-decoration: none;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    & li:not(:last-child){
-        margin-bottom: 40px;
-    }
-    & li:last-child {
-        margin-bottom: 60px;
-    }
-    & .nav-link.current::after {
-        position: absolute;
-        bottom: -8px;
-        left:0;
-
-        content:"";
-        width:100%;
-        height: 4px;
-        margin: 0;
-        // margin-bottom: -2px;
-        background-color: var(--accent-color);
-        border-radius: 2px;
-    }
-    & .nav-link:hover,
-    & .nav-link:focus,
-    & .nav-link.current {
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.current {
         color: var(--accent-color);
     }
-}
+
 .logo {
     color: var(--accent-color);
 }
-// .main-nav-list {
-//     display: flex;
-//     & li:not(:last-child) {
-//         margin-right: 50px;
-//     }
-// }
+
 .link {
     display: block;
     color: var(--primary-text-color);
@@ -148,6 +113,32 @@ header {
     &:hover, &:focus {
         color: var(--accent-color);
     }
+}
+
+@media screen and (min-width: 768px) {
+    .menu-button {
+        display: none;
+    }
+    .head {
+        display: flex;
+        align-items: center;
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+    .main-nav-list {
+        display: flex;
+        margin-right: 84px;
+        align-items: center;
+
+        li:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+    .navigation {
+        display: flex;
+        margin-left: auto;
+    }
+    
 }
 .adress-nav {
     // margin-left: auto;
