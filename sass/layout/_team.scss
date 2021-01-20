@@ -1,8 +1,5 @@
 /* Стиль Команды */
 
-
-
-
 .ourteam {
     background-color:var(--primary-bcg-clr-btn);
     padding-top: 60px;
@@ -20,10 +17,10 @@
     max-width: 450px;
     margin: auto;
     text-align: center;
-    @media screen and ( max-width: 767px) {
-        .team-list-item:not(:last-child) {
-            margin-bottom: 30px;
-        }
+}
+@media screen and ( max-width: 767px) {
+    .team-list-item:not(:last-child) {
+        margin-bottom: 30px;
     }
 }
 .social-sublist {
@@ -57,6 +54,7 @@
     margin-right: 10px;
 }
 .ourteam .item-photo {
+    width: 100%;
     margin-bottom: 30px;
 }
 .ourteam .item-title {
