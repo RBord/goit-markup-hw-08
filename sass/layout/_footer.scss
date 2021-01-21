@@ -160,6 +160,9 @@
     .footer-right {
         text-align: left;
         margin-right: 93px;
+        .social-sublist {
+            margin-bottom: 0;
+        }
     }
     .footer-form {
         text-align: left;
@@ -169,8 +172,5 @@
             width: 358px;
             margin-right: 12px;
         }
-    }
-    .social-sublist {
-        margin-bottom: 0;
     }
 }
