@@ -566,7 +566,7 @@ a {
   }
   .text-on-img {
     position: absolute;
-    bottom: 0;
+    bottom: 6px;
     left: 0;
     width: 100%;
     height: 70px;
@@ -592,8 +592,21 @@ a {
   padding-bottom: 60px;
 }
 
+@media screen and (min-width: 1200px) {
+  .ourteam {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .team.title {
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .team.title {
+    margin-bottom: 50px;
+  }
 }
 
 .team-list-item {
@@ -707,6 +720,12 @@ a {
 
 .client.title {
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .client.title {
+    margin-bottom: 50px;
+  }
 }
 
 .client-link {
@@ -1025,7 +1044,7 @@ a {
   display: inline-block;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .list-item:first-child {
     margin-bottom: 15px;
   }
